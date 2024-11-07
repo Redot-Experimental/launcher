@@ -1,10 +1,9 @@
-import * as React from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/projects/')({
   component: RouteComponent
 })
 
-function RouteComponent() {
+function RouteComponent(): string {
   return 'Hello /projects/projects!'
 }
