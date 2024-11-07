@@ -47,7 +47,7 @@ body:
     validations:
       required: true
   - type: input
-    id: hydra-version
+    id: redot-version
     attributes:
       label: Redot Launcher Version
       description: Enter the version of Redot Launcher in use.
