@@ -35,6 +35,7 @@
     "@electron-toolkit/tsconfig": "^1.0.1",
     "@tanstack/router-devtools": "^1.79.0",
     "@tanstack/router-plugin": "^1.79.0",
+    "@tanstack/react-router": "^1.79.0",
     "@types/node": "^20.14.8",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
