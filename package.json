@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Launcher for Redot engine to centralize engine version managment",
   "main": "./out/main/index.js",
+  "license": "MIT",
   "author": "charlottewiltshire0",
   "homepage": "https://www.redotengine.org/",
   "scripts": {
