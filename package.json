@@ -1,12 +1,13 @@
 {
   "name": "redot-launcher",
   "version": "1.0.0",
-  "description": "An Electron application with React and TypeScript",
+  "description": "Launcher for Redot engine to centralize engine version managment",
   "main": "./out/main/index.js",
-  "author": "example.com",
-  "homepage": "https://electron-vite.org",
+  "author": "charlottewiltshire0",
+  "homepage": "https://www.redotengine.org/",
   "scripts": {
     "format": "prettier --write .",
+    "format-check": "prettier --check .",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
     "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
     "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
@@ -18,7 +19,8 @@
     "build:unpack": "npm run build && electron-builder --dir",
     "build:win": "npm run build && electron-builder --win",
     "build:mac": "electron-vite build && electron-builder --mac",
-    "build:linux": "electron-vite build && electron-builder --linux"
+    "build:linux": "electron-vite build && electron-builder --linux",
+    "prepare": "husky"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.1",
@@ -38,6 +40,7 @@
     "electron-vite": "^2.3.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.3",
+    "husky": "^9.1.6",
     "postcss": "^8.4.47",
     "prettier": "^3.3.2",
     "react": "^18.3.1",
