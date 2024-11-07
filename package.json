@@ -6,6 +6,15 @@
   "license": "MIT",
   "author": "charlottewiltshire0",
   "homepage": "https://www.redotengine.org/",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Redot-Experimental/launcher"
+  },
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.19.1"
+  },
   "scripts": {
     "format": "prettier --write .",
     "format-check": "prettier --check .",
