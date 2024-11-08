@@ -1,13 +1,20 @@
 {
   "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
-  "include": ["electron.vite.config.*", "src/main/**/*", "src/preload/**/*"],
+  "include": ["electron.vite.config.*", "src/main/**/*", "src/preload/**/*", "src/shared/**/*"],
   "compilerOptions": {
     "jsx": "react-jsx",
+    "baseUrl": ".",
     "moduleResolution": "Bundler",
     "module": "ESNext",
     "target": "ES2022",
     "skipLibCheck": true,
     "strictNullChecks": true,
-    "types": ["electron-vite/node"]
+    "types": ["electron-vite/node"],
+    "paths": {
+      "@main/*": ["src/main/*"],
+      "@renderer/*": ["src/renderer/*"],
+      "@types/*": ["src/types/*"],
+      "@shared/*": ["src/shared/*"],
+    }
   }
 }
