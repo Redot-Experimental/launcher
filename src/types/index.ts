@@ -4,8 +4,11 @@ interface NavItem {
   title: string
   url: string
   icon: any
-  isActive: boolean
-  items: { title: string; url: string }[]
+  isActive?: boolean
+  items?: {
+    title: string
+    url: string
+  }[]
 }
 
 export interface NavMainProps {
