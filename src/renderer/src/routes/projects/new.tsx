@@ -1,15 +1,5 @@
 import * as React from 'react'
 import { createFileRoute } from '@tanstack/react-router'
-import { SidebarInset, SidebarTrigger } from '../../components/ui/sidebar'
-import { Separator } from '../../components/ui/separator'
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator
-} from '../../components/ui/breadcrumb'
 import { SharedSidebarLayout } from '../../components/shared-sidebar-layout'
 
 export const Route = createFileRoute('/projects/new')({
