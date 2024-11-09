@@ -21,7 +21,7 @@ import {
   IconSettings2
 } from '@tabler/icons-react'
 import { Link } from '@tanstack/react-router'
-import redotLogo from '@/assets/logo.svg'
+import redotLogo from '@renderer/assets/logo.svg'
 
 const data = {
   user: {

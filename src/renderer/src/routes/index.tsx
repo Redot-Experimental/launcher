@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { SharedSidebarLayout } from '@/components/shared-sidebar-layout'
+import { SharedSidebarLayout } from '@renderer/components/shared-sidebar-layout'
 
 export const Route = createFileRoute('/')({
   component: RouteComponent
