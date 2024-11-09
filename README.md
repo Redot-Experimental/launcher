@@ -48,13 +48,16 @@ The Redot Engine Launcher is a centralized hub designed to streamline your devel
 Follow the steps below to install:
 
 1. Download the latest version of Redot Engine Launcher from the [Releases](https://github.com/Redot-Experimental/launcher/releases/latest) page.
-  - Download only `.exe` if you want to install Redot Engine Launcher on Windows.
-  - Download `.deb`, `.rpm`, or `.zip` if you want to install Redot Engine Launcher on Linux (depends on your Linux distro).
-  - Download `.dmg` if you want to install Redot Engine Launcher on macOS.
+
+- Download only `.exe` if you want to install Redot Engine Launcher on Windows.
+- Download `.deb`, `.rpm`, or `.zip` if you want to install Redot Engine Launcher on Linux (depends on your Linux distro).
+- Download `.dmg` if you want to install Redot Engine Launcher on macOS.
+
 2. Run the downloaded or installed file from your Applications folder.
 3. Enjoy Redot Engine Launcher!
 
 ## <a name="contributing"> Contributing
+
 Redot is not only an engine but an ever-growing community of users and engine
 developers. Please visit our [Discord server](https://discord.gg/redot)!
 
