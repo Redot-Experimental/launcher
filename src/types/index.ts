@@ -14,3 +14,13 @@ export interface NavItem {
 export interface NavMainProps {
   items: Readonly<NavItem[]>
 }
+
+export interface Project {
+  name: string
+  url: string
+  icon: string
+}
+
+export interface NavProjectsProps {
+  projects: Readonly<Project[]>
+}

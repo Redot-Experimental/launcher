@@ -18,16 +18,9 @@ import {
 } from './ui/sidebar'
 import { IconCursorText, IconPlayerPlayFilled } from '@tabler/icons-react'
 import { Link } from '@tanstack/react-router'
+import { NavProjectsProps } from '@types'
 
-export function NavProjects({
-  projects
-}: {
-  projects: {
-    name: string
-    url: string
-    icon: string
-  }[]
-}) {
+export function NavProjects({ projects }: NavProjectsProps) {
   const { isMobile } = useSidebar()
 
   return (
