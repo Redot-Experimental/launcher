@@ -10,6 +10,7 @@
     "skipLibCheck": true,
     "strictNullChecks": true,
     "types": ["electron-vite/node"],
+    "noUnusedLocals": false,
     "paths": {
       "@main/*": ["src/main/*"],
       "@renderer/*": ["src/renderer/*"],
