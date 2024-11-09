@@ -40,7 +40,7 @@ interface BreadcrumbType {
   label: string
 }
 
-interface SharedSidebarLayoutProps {
+export interface SharedSidebarLayoutProps {
   breadcrumbs: ReadonlyArray<BreadcrumbType>
   title: string
   children: React.ReactNode
