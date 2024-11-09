@@ -15,7 +15,7 @@
     "paths": {
       "@renderer/*": ["src/renderer/src/*"],
       "@shared/*": ["src/shared/*"],
-      "@types/*": ["src/types/*"],
+      "@types": ["src/types/index.ts"],
       "@/components/*": ["src/renderer/src/components/*"],
       "@/hooks/*": ["src/renderer/src/hooks/*"]
     }
