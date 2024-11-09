@@ -1,14 +1,11 @@
-import { ReactNode } from 'react'
+import * as React from 'react'
 
-export interface NavItem {
+interface NavItem {
   title: string
   url: string
-  icon: ReactNode
-  isActive?: boolean
-  items?: {
-    title: string
-    url: string
-  }[]
+  icon: React.ReactNode
+  isActive: boolean
+  items: { title: string; url: string }[]
 }
 
 export interface NavMainProps {
