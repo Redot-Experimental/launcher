@@ -14,8 +14,7 @@
       "@main/*": ["src/main/*"],
       "@renderer/*": ["src/renderer/*"],
       "@types": ["src/types/index.ts"],
-      "@shared/*": ["src/shared/*"],
-      "@/components/*": ["src/renderer/src/components/*"]
+      "@shared": ["src/shared/index.ts"]
     }
   }
 }
