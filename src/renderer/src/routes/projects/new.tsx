@@ -8,10 +8,7 @@ export const Route = createFileRoute('/projects/new')({
 
 function RouteComponent() {
   return (
-    <SharedSidebarLayout
-      breadcrumbs={[{ href: '/projects', label: 'Projects' }]}
-      title="New Project"
-    >
+    <SharedSidebarLayout breadcrumbs={[{ href: '/', label: 'Projects' }]} title="New Project">
       <div>Content for the New Project page</div>
     </SharedSidebarLayout>
   )

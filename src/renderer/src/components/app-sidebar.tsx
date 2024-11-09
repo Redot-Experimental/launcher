@@ -32,7 +32,7 @@ const data = {
   navMain: [
     {
       title: 'Projects',
-      url: '/projects',
+      url: '/',
       icon: IconCube,
       isActive: true,
       items: [
