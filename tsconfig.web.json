@@ -14,8 +14,8 @@
     "noUnusedLocals": false,
     "paths": {
       "@renderer/*": ["src/renderer/src/*"],
-      "@shared/*": ["src/shared/*"],
-      "@types/*": ["src/types/*"]
+      "@shared": ["src/shared/index.ts"],
+      "@types": ["src/types/index.ts"],
     }
   }
 }

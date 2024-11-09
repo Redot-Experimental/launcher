@@ -2,6 +2,7 @@ import { resolve } from 'path'
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
 import react from '@vitejs/plugin-react'
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 export default defineConfig({
   main: {
@@ -22,9 +23,10 @@ export default defineConfig({
     resolve: {
       alias: {
         '@renderer': resolve('src/renderer/src'),
+        '@locales': resolve('src/locales'),
         '@shared': resolve('src/shared')
       }
     },
-    plugins: [react(), TanStackRouterVite()]
+    plugins: [react(), TanStackRouterVite(), ViteImageOptimizer()]
   }
 })
