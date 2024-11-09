@@ -1,6 +1,11 @@
 import { IconDots, IconFolder, IconStar, IconStarFilled } from '@tabler/icons-react'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-import { Badge } from '@/components/ui/badge'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger
+} from '@renderer/components/ui/tooltip'
+import { Badge } from '@renderer/components/ui/badge'
 import { cn } from '../../utils'
 
 export const BentoGrid = ({
