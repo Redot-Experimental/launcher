@@ -3,7 +3,7 @@ import * as React from 'react'
 interface NavItem {
   title: string
   url: string
-  icon: React.ReactNode
+  icon: any
   isActive: boolean
   items: { title: string; url: string }[]
 }
