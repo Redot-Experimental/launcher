@@ -24,3 +24,13 @@ export interface Project {
 export interface NavProjectsProps {
   projects: Readonly<Project[]>
 }
+
+export interface User {
+  name: string
+  email: string
+  avatar: string
+}
+
+export interface NavUserProps {
+  user: Readonly<User>
+}
