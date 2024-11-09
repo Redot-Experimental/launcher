@@ -9,16 +9,9 @@ import {
   BreadcrumbSeparator
 } from './ui/breadcrumb'
 import { Separator } from './ui/separator'
+import { SharedSidebarLayoutProps } from '@types'
 
-export function SharedSidebarLayout({
-  breadcrumbs,
-  title,
-  children
-}: {
-  breadcrumbs: Array<{ href: string; label: string }>
-  title: string
-  children: React.ReactNode
-}) {
+export function SharedSidebarLayout({ breadcrumbs, title, children }: SharedSidebarLayoutProps) {
   return (
     <SidebarInset>
       <header className="flex h-16 shrink-0 items-center gap-2">

@@ -34,3 +34,14 @@ export interface User {
 export interface NavUserProps {
   user: Readonly<User>
 }
+
+interface BreadcrumbType {
+  href: string
+  label: string
+}
+
+interface SharedSidebarLayoutProps {
+  breadcrumbs: ReadonlyArray<BreadcrumbType>
+  title: string
+  children: React.ReactNode
+}
