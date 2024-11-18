@@ -1,17 +1,21 @@
-import * as React from 'react'
-import { SidebarInset, SidebarTrigger } from './ui/sidebar'
+import * as React from "react";
+import { SidebarInset, SidebarTrigger } from "./ui/sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
-  BreadcrumbSeparator
-} from './ui/breadcrumb'
-import { Separator } from './ui/separator'
-import { SharedSidebarLayoutProps } from '@types'
+  BreadcrumbSeparator,
+} from "./ui/breadcrumb";
+import { Separator } from "./ui/separator";
+import { SharedSidebarLayoutProps } from "@types";
 
-export function SharedSidebarLayout({ breadcrumbs, title, children }: SharedSidebarLayoutProps) {
+export function SharedSidebarLayout({
+  breadcrumbs,
+  title,
+  children,
+}: SharedSidebarLayoutProps) {
   return (
     <SidebarInset>
       <header className="flex h-16 shrink-0 items-center gap-2">
@@ -22,9 +26,13 @@ export function SharedSidebarLayout({ breadcrumbs, title, children }: SharedSide
             <BreadcrumbList>
               {breadcrumbs.map((crumb, index) => (
                 <React.Fragment key={crumb.label}>
-                  {index > 0 && <BreadcrumbSeparator className="hidden md:block" />}
+                  {index > 0 && (
+                    <BreadcrumbSeparator className="hidden md:block" />
+                  )}
                   <BreadcrumbItem className="hidden md:block">
-                    <BreadcrumbLink href={crumb.href}>{crumb.label}</BreadcrumbLink>
+                    <BreadcrumbLink href={crumb.href}>
+                      {crumb.label}
+                    </BreadcrumbLink>
                   </BreadcrumbItem>
                 </React.Fragment>
               ))}
@@ -37,5 +45,5 @@ export function SharedSidebarLayout({ breadcrumbs, title, children }: SharedSide
       </header>
       {children}
     </SidebarInset>
-  )
+  );
 }

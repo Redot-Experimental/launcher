@@ -1,34 +1,39 @@
-import { IconDots, IconFolder, IconStar, IconStarFilled } from '@tabler/icons-react'
+import {
+  IconDots,
+  IconFolder,
+  IconStar,
+  IconStarFilled,
+} from "@tabler/icons-react";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger
-} from '@renderer/components/ui/tooltip'
-import { Badge } from '@renderer/components/ui/badge'
-import { cn } from '../../utils'
+  TooltipTrigger,
+} from "@renderer/components/ui/tooltip";
+import { Badge } from "@renderer/components/ui/badge";
+import { cn } from "../../utils";
 
 export const BentoGrid = ({
   className,
   recentProjects,
-  projects
+  projects,
 }: {
-  className?: string
+  className?: string;
   recentProjects: Array<{
-    title: string
-    src: string
-    header: React.ReactNode
-    isFavorite: boolean
-  }>
+    title: string;
+    src: string;
+    header: React.ReactNode;
+    isFavorite: boolean;
+  }>;
   projects: Array<{
-    title: string
-    src: string
-    header: React.ReactNode
-    isFavorite: boolean
-  }>
+    title: string;
+    src: string;
+    header: React.ReactNode;
+    isFavorite: boolean;
+  }>;
 }) => {
   return (
-    <div className={cn('mx-auto', className)}>
+    <div className={cn("mx-auto", className)}>
       <div className="grid grid-cols-3 gap-4">
         <div className="col-span-1">
           <h2 className="mb-4 p-1 text-sm font-medium">Recent Projects</h2>
@@ -46,36 +51,39 @@ export const BentoGrid = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export const BentoGridItem = ({
   className,
   title,
   src,
   header,
-  isFavorite
+  isFavorite,
 }: {
-  className?: string
-  title?: string | React.ReactNode
-  src?: string
-  header?: React.ReactNode
-  isFavorite: boolean
+  className?: string;
+  title?: string | React.ReactNode;
+  src?: string;
+  header?: React.ReactNode;
+  isFavorite: boolean;
 }) => {
-  const maxLength = 36
-  const truncatedSrc = src && src.length > maxLength ? `${src.slice(0, maxLength)}...` : src || ''
+  const maxLength = 36;
+  const truncatedSrc =
+    src && src.length > maxLength ? `${src.slice(0, maxLength)}...` : src || "";
 
   return (
     <div
       className={cn(
-        'group/bento row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-transparent bg-white p-4 shadow-input transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-primary-foreground',
+        "group/bento row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-transparent bg-white p-4 shadow-input transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-primary-foreground",
         className
       )}
     >
       <div className="flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <div className="flex flex-row items-center">
-            <div className="group relative hidden h-8 w-8 md:block">{header}</div>
+            <div className="group relative hidden h-8 w-8 md:block">
+              {header}
+            </div>
             <div className="transition duration-200 group-hover/bento:translate-x-2">
               <div className="ml-2">
                 <div className="text-sm font-bold text-neutral-600 dark:text-neutral-200">
@@ -111,5 +119,5 @@ export const BentoGridItem = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

@@ -1,12 +1,12 @@
-import { Folder, MoreHorizontal, Trash2 } from 'lucide-react'
+import { Folder, MoreHorizontal, Trash2 } from "lucide-react";
 
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-  DropdownMenuTrigger
-} from './ui/dropdown-menu'
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -14,14 +14,14 @@ import {
   SidebarMenuAction,
   SidebarMenuButton,
   SidebarMenuItem,
-  useSidebar
-} from './ui/sidebar'
-import { IconCursorText, IconPlayerPlayFilled } from '@tabler/icons-react'
-import { Link } from '@tanstack/react-router'
-import { NavProjectsProps } from '@types'
+  useSidebar,
+} from "./ui/sidebar";
+import { IconCursorText, IconPlayerPlayFilled } from "@tabler/icons-react";
+import { Link } from "@tanstack/react-router";
+import { NavProjectsProps } from "@types";
 
 export function NavProjects({ projects }: NavProjectsProps) {
-  const { isMobile } = useSidebar()
+  const { isMobile } = useSidebar();
 
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
@@ -31,7 +31,13 @@ export function NavProjects({ projects }: NavProjectsProps) {
           <SidebarMenuItem key={item.name}>
             <SidebarMenuButton asChild>
               <Link to={item.url}>
-                <img alt="icon" src={item.icon} width={16} height={16} className="rounded" />
+                <img
+                  alt="icon"
+                  src={item.icon}
+                  width={16}
+                  height={16}
+                  className="rounded"
+                />
                 <span>{item.name}</span>
               </Link>
             </SidebarMenuButton>
@@ -44,8 +50,8 @@ export function NavProjects({ projects }: NavProjectsProps) {
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 className="w-48"
-                side={isMobile ? 'bottom' : 'right'}
-                align={isMobile ? 'end' : 'start'}
+                side={isMobile ? "bottom" : "right"}
+                align={isMobile ? "end" : "start"}
               >
                 <DropdownMenuItem>
                   <Folder className="text-muted-foreground" />
@@ -76,5 +82,5 @@ export function NavProjects({ projects }: NavProjectsProps) {
         </SidebarMenuItem>
       </SidebarMenu>
     </SidebarGroup>
-  )
+  );
 }

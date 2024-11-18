@@ -1,13 +1,18 @@
-import { contextBridge } from 'electron'
+import { contextBridge, ipcRenderer } from "electron";
 
-if (!process.contextIsolated) {
-  throw new Error('contextIsolated must be enabled in the BrowseWindow')
-}
-
-try {
-  contextBridge.exposeInMainWorld('electron', {
-    // TODO
-  })
-} catch (e) {
-  console.error(e)
-}
+contextBridge.exposeInMainWorld("electron", {
+  // Auth
+  signOut: () => ipcRenderer.invoke("signOut"),
+  openAuthWindow: () => ipcRenderer.invoke("openAuthWindow"),
+  getSessionHash: () => ipcRenderer.invoke("getSessionHash"),
+  onSignIn: (cb: () => void) => {
+    const listener = (_event: Electron.IpcRendererEvent) => cb();
+    ipcRenderer.on("on-signin", listener);
+    return () => ipcRenderer.removeListener("on-signin", listener);
+  },
+  onSignOut: (cb: () => void) => {
+    const listener = (_event: Electron.IpcRendererEvent) => cb();
+    ipcRenderer.on("on-signout", listener);
+    return () => ipcRenderer.removeListener("on-signout", listener);
+  },
+});

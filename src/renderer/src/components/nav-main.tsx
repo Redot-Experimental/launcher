@@ -1,6 +1,10 @@
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight } from "lucide-react";
 
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from './ui/collapsible'
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "./ui/collapsible";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -10,10 +14,10 @@ import {
   SidebarMenuItem,
   SidebarMenuSub,
   SidebarMenuSubButton,
-  SidebarMenuSubItem
-} from './ui/sidebar'
-import type { NavMainProps } from '@types'
-import { Link } from '@tanstack/react-router'
+  SidebarMenuSubItem,
+} from "./ui/sidebar";
+import type { NavMainProps } from "@types";
+import { Link } from "@tanstack/react-router";
 
 export function NavMain({ items }: NavMainProps) {
   return (
@@ -57,5 +61,5 @@ export function NavMain({ items }: NavMainProps) {
         ))}
       </SidebarMenu>
     </SidebarGroup>
-  )
+  );
 }

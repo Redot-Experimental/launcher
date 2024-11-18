@@ -1,23 +1,23 @@
-import * as React from 'react'
+import * as React from "react";
 
 import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
-  SidebarMenuItem
-} from './ui/sidebar'
-import { Link } from '@tanstack/react-router'
+  SidebarMenuItem,
+} from "./ui/sidebar";
+import { Link } from "@tanstack/react-router";
 
 export function NavSecondary({
   items,
   ...props
 }: {
   items: {
-    title: string
-    url: string
-    icon: any
-  }[]
+    title: string;
+    url: string;
+    icon: any;
+  }[];
 } & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
   return (
     <SidebarGroup {...props}>
@@ -36,5 +36,5 @@ export function NavSecondary({
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>
-  )
+  );
 }

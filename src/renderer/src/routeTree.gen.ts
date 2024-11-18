@@ -10,85 +10,85 @@
 
 // Import Routes
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as IndexImport } from './routes/index'
-import { Route as ProjectsNewImport } from './routes/projects/new'
+import { Route as rootRoute } from "./routes/__root";
+import { Route as IndexImport } from "./routes/index";
+import { Route as ProjectsNewImport } from "./routes/projects/new";
 
 // Create/Update Routes
 
 const IndexRoute = IndexImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRoute
-} as any)
+  id: "/",
+  path: "/",
+  getParentRoute: () => rootRoute,
+} as any);
 
 const ProjectsNewRoute = ProjectsNewImport.update({
-  id: '/projects/new',
-  path: '/projects/new',
-  getParentRoute: () => rootRoute
-} as any)
+  id: "/projects/new",
+  path: "/projects/new",
+  getParentRoute: () => rootRoute,
+} as any);
 
 // Populate the FileRoutesByPath interface
 
-declare module '@tanstack/react-router' {
+declare module "@tanstack/react-router" {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/projects/new': {
-      id: '/projects/new'
-      path: '/projects/new'
-      fullPath: '/projects/new'
-      preLoaderRoute: typeof ProjectsNewImport
-      parentRoute: typeof rootRoute
-    }
+    "/": {
+      id: "/";
+      path: "/";
+      fullPath: "/";
+      preLoaderRoute: typeof IndexImport;
+      parentRoute: typeof rootRoute;
+    };
+    "/projects/new": {
+      id: "/projects/new";
+      path: "/projects/new";
+      fullPath: "/projects/new";
+      preLoaderRoute: typeof ProjectsNewImport;
+      parentRoute: typeof rootRoute;
+    };
   }
 }
 
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/projects/new': typeof ProjectsNewRoute
+  "/": typeof IndexRoute;
+  "/projects/new": typeof ProjectsNewRoute;
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/projects/new': typeof ProjectsNewRoute
+  "/": typeof IndexRoute;
+  "/projects/new": typeof ProjectsNewRoute;
 }
 
 export interface FileRoutesById {
-  __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/projects/new': typeof ProjectsNewRoute
+  __root__: typeof rootRoute;
+  "/": typeof IndexRoute;
+  "/projects/new": typeof ProjectsNewRoute;
 }
 
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projects/new'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/projects/new'
-  id: '__root__' | '/' | '/projects/new'
-  fileRoutesById: FileRoutesById
+  fileRoutesByFullPath: FileRoutesByFullPath;
+  fullPaths: "/" | "/projects/new";
+  fileRoutesByTo: FileRoutesByTo;
+  to: "/" | "/projects/new";
+  id: "__root__" | "/" | "/projects/new";
+  fileRoutesById: FileRoutesById;
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  ProjectsNewRoute: typeof ProjectsNewRoute
+  IndexRoute: typeof IndexRoute;
+  ProjectsNewRoute: typeof ProjectsNewRoute;
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ProjectsNewRoute: ProjectsNewRoute
-}
+  ProjectsNewRoute: ProjectsNewRoute,
+};
 
 export const routeTree = rootRoute
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+  ._addFileTypes<FileRouteTypes>();
 
 /* ROUTE_MANIFEST_START
 {

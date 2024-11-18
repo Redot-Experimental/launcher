@@ -1,6 +1,6 @@
-import { BadgeCheck, Bell, ChevronsUpDown, LogOut } from 'lucide-react'
+import { BadgeCheck, Bell, ChevronsUpDown, LogOut } from "lucide-react";
 
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,17 +8,30 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuTrigger
-} from './ui/dropdown-menu'
-import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from './ui/sidebar'
-import { NavUserProps } from '@types'
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+import {
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  useSidebar,
+} from "./ui/sidebar";
+import { NavUserProps } from "@types";
+import { Button } from "./ui/button";
 
 export function NavUser({ user }: NavUserProps) {
-  const { isMobile } = useSidebar()
+  const { isMobile } = useSidebar();
+
+  const handleProfileClick = () => {
+    console.log("Profile clicked");
+    // window.electron.openAuthWindow();
+    return;
+  };
 
   return (
     <SidebarMenu>
       <SidebarMenuItem>
+        <button onClick={handleProfileClick}>Test</button>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton
@@ -38,7 +51,7 @@ export function NavUser({ user }: NavUserProps) {
           </DropdownMenuTrigger>
           <DropdownMenuContent
             className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
-            side={isMobile ? 'bottom' : 'right'}
+            side={isMobile ? "bottom" : "right"}
             align="end"
             sideOffset={4}
           >
@@ -74,5 +87,5 @@ export function NavUser({ user }: NavUserProps) {
         </DropdownMenu>
       </SidebarMenuItem>
     </SidebarMenu>
-  )
+  );
 }
