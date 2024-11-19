@@ -1,4 +1,5 @@
 <!-- omit in toc -->
+
 # Contributing to Redot Engine Launcher
 
 First off, thanks for taking the time to contribute! ❤️
@@ -6,12 +7,14 @@ First off, thanks for taking the time to contribute! ❤️
 All types of contributions are encouraged and valued. See the [Table of Contents](#table-of-contents) for different ways to help and details about how this project handles them. Please make sure to read the relevant section before making your contribution. It will make it a lot easier for us maintainers and smooth out the experience for all involved. The community looks forward to your contributions. 🎉
 
 > And if you like the project, but just don't have time to contribute, that's fine. There are other easy ways to support the project and show your appreciation, which we would also be very happy about:
+>
 > - Star the project
 > - Tweet about it
 > - Refer this project in your project's readme
 > - Mention the project at local meetups and tell your friends/colleagues
 
 <!-- omit in toc -->
+
 ## Table of Contents
 
 - [I Have a Question](#i-have-a-question)
@@ -23,8 +26,6 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 - [Styleguides](#styleguides)
 - [Commit Messages](#commit-messages)
 - [Join The Project Team](#join-the-project-team)
-
-
 
 ## I Have a Question
 
@@ -45,6 +46,7 @@ We will then take care of the issue as soon as possible.
 ### Reporting Bugs
 
 <!-- omit in toc -->
+
 #### Before Submitting a Bug Report
 
 A good bug report shouldn't leave others needing to chase you up for more information. Therefore, we ask you to investigate carefully, collect information and describe the issue in detail in your report. Please complete the following steps in advance to help us fix any potential bug as fast as possible.
@@ -60,16 +62,18 @@ A good bug report shouldn't leave others needing to chase you up for more inform
 - Can you reliably reproduce the issue? And can you also reproduce it with older versions?
 
 <!-- omit in toc -->
+
 #### How Do I Submit a Good Bug Report?
 
 > You must never report security related issues, vulnerabilities or bugs including sensitive information to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent by email to .
+
 <!-- You may add a PGP key to allow the messages to be sent encrypted as well. -->
 
 We use GitHub issues to track bugs and errors. If you run into an issue with the project:
 
 - Open an [Issue](https://github.com/Redot-Experimental/launcher/issues/new/choose). (Since we can't be sure at this point whether it is a bug or not, we ask you not to talk about a bug yet and not to label the issue.)
 - Explain the behavior you would expect and the actual behavior.
-- Please provide as much context as possible and describe the *reproduction steps* that someone else can follow to recreate the issue on their own. This usually includes your code. For good bug reports you should isolate the problem and create a reduced test case.
+- Please provide as much context as possible and describe the _reproduction steps_ that someone else can follow to recreate the issue on their own. This usually includes your code. For good bug reports you should isolate the problem and create a reduced test case.
 - Provide the information you collected in the previous section.
 
 Once it's filed:
@@ -83,6 +87,7 @@ Once it's filed:
 This section guides you through submitting an enhancement suggestion for Redot Engine Launcher, **including completely new features and minor improvements to existing functionality**. Following these guidelines will help maintainers and the community to understand your suggestion and find related suggestions.
 
 <!-- omit in toc -->
+
 #### Before Submitting an Enhancement
 
 - Make sure that you are using the latest version.
@@ -91,6 +96,7 @@ This section guides you through submitting an enhancement suggestion for Redot E
 - Find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to convince the project's developers of the merits of this feature. Keep in mind that we want features that will be useful to the majority of our users and not just a small subset.
 
 <!-- omit in toc -->
+
 #### How Do I Submit a Good Enhancement Suggestion?
 
 Enhancement suggestions are tracked as [GitHub issues](https://github.com/Redot-Experimental/launcher/issues).
@@ -102,6 +108,7 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/Redot-
 - **Explain why this enhancement would be useful** to most Redot Engine Launcher users. You may also want to point out the other projects that solved it better and which could serve as inspiration.
 
 ## Styleguides
+
 ### Commit Messages
 
 To maintain clarity and consistency in the project’s history, we use [semantic commit messages](https://www.conventionalcommits.org/). Below are the rules for writing commit messages.
@@ -132,5 +139,43 @@ feat: add hat wobble
 - http://karma-runner.github.io/1.0/dev/git-commit-msg.html
 
 <!-- omit in toc -->
+
+### Branch Naming
+
+#### Format
+
+```
+<type>/#<issueNumber>-<alias>
+```
+
+`issueNumber` is optional.
+
+#### Example
+
+```
+feature/#1-init
+^------^   ^---^
+|          |
+|          +---> issue's keyword
+|
++-------> Type: or feat, chore, docs, fix, refactor, style, or test.
+```
+
+- `feat` or `feature`: (new feature for the user, not a new feature for build script)
+- `fix`: (bug fix for the user, not a fix to a build script)
+- `docs`: (changes to the documentation)
+- `style`: (formatting, missing semi colons, etc; no production code change)
+- `refactor`: (refactoring production code, eg. renaming a variable)
+- `test`: (adding missing tests, refactoring tests; no production code change)
+- `chore`: (updating grunt tasks etc; no production code change)
+-
+
+#### References:
+
+- https://gist.github.com/seunggabi/87f8c722d35cd07deb3f649d45a31082
+
+<!-- omit in toc -->
+
 ## Attribution
+
 This guide is based on the [contributing.md](https://contributing.md/generator)!
